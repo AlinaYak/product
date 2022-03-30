@@ -18,9 +18,7 @@ public class Smartphone extends Product {
         if (super.matches(search)) {
             return true;
         }
-        if (search.equalsIgnoreCase(vendor)) {
-            return true;
-        }
-        return false;
+
+        return this.vendor.equalsIgnoreCase(search);
     }
 }

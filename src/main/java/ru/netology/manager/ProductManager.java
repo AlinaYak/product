@@ -28,4 +28,19 @@ public class ProductManager {
         }
         return result;
     }
+    public Product[] findAll() {
+        return repository.findAll();
+    }
+
+    public Product findById(int id) {
+        return repository.findById(id);
+    }
+
+    public void removeById(int id) {
+        try {
+            repository.removeById(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
